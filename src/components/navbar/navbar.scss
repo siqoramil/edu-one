@@ -1,0 +1,42 @@
+@mixin dF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    @include dF();
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    .left {
+        @include dF();
+        column-gap: 20px;
+        img {
+            width: 64px;
+            height: 64px;
+        }
+        span {
+            font-size: 25px;
+            font-family: serif;
+            font-weight: bold;
+        }
+    }
+
+    .right {
+        @include dF();
+        column-gap: 32px;
+        ul {
+            @include dF();
+            column-gap: 30px;
+            li {
+                a {
+                }
+            }
+        }
+        button {
+            a {
+            }
+        }
+    }
+}
