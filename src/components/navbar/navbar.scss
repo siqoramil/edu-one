@@ -1,3 +1,5 @@
+$color1: #06BBCC;
+
 @mixin dF {
     display: flex;
     align-items: center;
@@ -7,15 +9,17 @@
 nav {
     @include dF();
     justify-content: space-between;
-    padding: 10px 20px;
 
     .left {
         @include dF();
         column-gap: 20px;
+        padding-left: 25px;
+
         img {
             width: 64px;
             height: 64px;
         }
+        
         span {
             font-size: 25px;
             font-family: serif;
@@ -26,16 +30,29 @@ nav {
     .right {
         @include dF();
         column-gap: 32px;
+
         ul {
             @include dF();
             column-gap: 30px;
+            text-transform: uppercase;
+
             li {
                 a {
+                    font-size: 15px;
                 }
             }
         }
+
         button {
+            width: 200px;
+            height: 80px;
+            border: none;
+            background-color: $color1;
+            cursor: pointer;
+            
             a {
+                font-size: 16px;
+                color: #fff;
             }
         }
     }
