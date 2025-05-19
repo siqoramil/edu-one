@@ -1,0 +1,45 @@
+@import '../../styles/colors.scss';
+
+@mixin dFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    margin: 125px 64px;
+    @include dFlex();
+    justify-content: space-between;
+    column-gap: 16px;
+
+    .card {
+        @include dFlex();
+        flex-direction: column;
+        background-color: #ebfcff;
+        padding: 36px;
+        text-align: center;
+
+        .icon {
+            font-size: 64px;
+            color: $color1;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-weight: 100;
+        }
+
+        &:hover {
+            background-color: $color1;
+            margin-top: -16px;
+            transition: 0.7s ease;
+
+            &:hover .icon, h1, p {
+                color: #fff;
+            }
+        }
+    }
+}
